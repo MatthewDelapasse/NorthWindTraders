@@ -27,9 +27,9 @@ namespace NorthWindTraders
 
         private void frmCustomers_Load(object sender, EventArgs e)
         {
-            //Connect to NWind database
-            string filename = Path.GetFullPath("SQLNwindDB.mdf");
-            NWindConnection = new SqlConnection("Data Source=.\\SQLEXPRESS01; AttachDbFileName=" + filename + "; Integrated Security=True; Connect Timeout = 30; User Instance = True");
+            //connect to NorthWind Database
+            string path = Path.GetFullPath("SQLNwindDB.mdf");
+            NWindConnection = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename=" + path + ";Integrated Security=True;Connect Timeout=30;User Instance=True");
 
             //open the connection
             NWindConnection.Open();
